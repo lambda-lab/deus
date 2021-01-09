@@ -7,6 +7,8 @@
 #include <linux/ioctl.h>
 #include "deus.h"
 
+#include "driver.h"
+
 
 #include <linux/uaccess.h>          // Required for the copy to user function
 #define  DEVICE_NAME "deus-ctrl"
@@ -77,6 +79,7 @@ static int __init deus_init(void){
       return PTR_ERR(deuscharDevice);
    }
    printk(KERN_INFO "deusChar: device class created correctly\n"); // Made it! device was initialized
+   driver_prepare();
    return 0;
 }
 
@@ -116,6 +119,7 @@ static long dev_ioctl(struct file *filep, unsigned int cmd, unsigned long arg) {
 			
 			return 0;
 		case IOCTL_REGISTER_MASTER:
+         
 			return 0;
 		case IOCTL_MASTER_WAIT_EVENT:
 			return 0;
