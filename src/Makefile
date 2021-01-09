@@ -1,7 +1,9 @@
-obj-m := deus.o
-mymodule-objs := super.o
+obj-m := deus.o 
+deus-objs := driver.o deus.o
+CONFIG_MODULE_SIG=n
 
-CFLAGS_super.o := -DDEBUG
+
+CFLAGS_deus.o := -DDEBUG
 
 all:
 	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
