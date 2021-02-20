@@ -1,4 +1,4 @@
-obj-m := deus.o
+obj-m := kernel/deus.o
 mymodule-objs := super.o
 
 CFLAGS_super.o := -DDEBUG
