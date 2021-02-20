@@ -75,7 +75,6 @@ void test_create_master_creates_device_error(void) {
     create_device_call_result = 0;
     struct master *mst2 = master_create();
     CU_ASSERT_EQUAL(master_get_id(mst2), 0);
-
 }
 
 REGISTER_TEST_S(master, test_create_master)
