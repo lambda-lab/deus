@@ -2,11 +2,11 @@
 #include <CUnit/Basic.h>
 #include "tests.h"
 
-CU_pSuite default_suite;
+CU_pSuite SUITE_NAME(dflt);
 
 void __attribute__(( __constructor__ (105) )) __setup_tests(void) {
     CU_initialize_registry();
-    default_suite = CU_add_suite_with_setup_and_teardown(
+    SUITE_NAME(dflt) = CU_add_suite_with_setup_and_teardown(
         "default", 
         NULL, 
         NULL, 

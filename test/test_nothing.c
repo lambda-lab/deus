@@ -12,6 +12,7 @@ void nothing_teardown(void) {
 }
 
 void test_nothing(void) {
-    CU_PASS("Passed!")
-    
+    CU_PASS("Passed!")  
 }
+
+REGISTER_TEST (test_nothing )
