@@ -18,5 +18,8 @@ struct master *master_create(void);
 void master_clear_all(void);
 
 int master_get_id(struct master*);
+int master_delete(struct master *masterToDelete);
+
+int master_count_get(void);
 
 #endif
