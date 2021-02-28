@@ -9,8 +9,9 @@
 #include <core/deus_list.h>
 
 struct master {
-    int id;
     struct deus_list_head head;
+    int id;
+    int deviceIndex;
 };
 
 struct master *master_create(void);
