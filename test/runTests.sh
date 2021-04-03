@@ -1,7 +1,7 @@
 #!/bin/sh 
 
 # add here list of directories under ./src that should be linked to tests 
-LINK_SOURCE_CODE_DIRECTORIES=""
+LINK_SOURCE_CODE_DIRECTORIES="."
 
 
 cd $(dirname $(readlink -f $0))
